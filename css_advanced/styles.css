@@ -1,1 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Source Sans 3", "Poppins", sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+  background-color: #0f111a; /* optional background */
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  color: white;
+}
+
+#logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 900;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+}
+
+ul a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+ul a:hover {
+  color: #c271ff;
+}
+
+@media (max-width: 600px) {
+  ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* =======================
+   HERO SECTION
+======================= */
+.hero-section {
+  background-image: url("./images/Object.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  margin-top: -80px;
+  padding-top: 150px;
+  text-align: center;
+}
+
+.hero-mid-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-mid-section button {
+  background: #c271ff;
+  color: white;
+  width: 162px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.33);
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background 0.3s;
+}
+
+.hero-mid-section button:hover {
+  background: #b45fe0;
+}
+
+#hero-header {
+  font-size: 7rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  #hero-header {
+    font-size: 5rem;
+  }
+}
+
+/* =======================
+   SECOND SECTION / TEAM
+======================= */
+.second-header {
+  margin-top: 150px;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.second-header h2 {
+  margin-bottom: 100px;
+  opacity: 0.9;
+}
+
+.second-header h2 span {
+  color: #c271ff;
+  font-weight: 700;
+}
+
+#smile-sample {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10% 50px 10%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#smile-sample img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.sample-dev {
+  max-width: 200px;
+  text-align: center;
+}
+
+.sample-dev h3 {
+  margin: 10px 0 5px;
+  font-size: 1rem;
+}
+
+.sample-dev p {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #c0c0c0;
+}
+
+@media (max-width: 600px) {
+  #smile-sample {
+    padding: 0 5px;
+    gap: 20px;
+  }
+  .sample-dev {
+    flex: 1 1 100%;
+  }
+}
+
+/* =======================
+   QUOTE SECTION
+======================= */
+.quote-section {
+  max-width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 100px 10%;
+  justify-content: center;
+  align-items: center;
+  background-color: #c271ff;
+  color: white;
+  gap: 40px;
+}
+
+.quote-section > :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 600px;
+}
+
+.quote-section blockquote {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.quote-section h3 {
+  margin-bottom: 5px;
+}
+
+.quote-section p {
+  margin-top: 0;
+}
+
+/* =======================
+   TUTORIALS / VIDEOS
+======================= */
+.tutorials-section h2 {
+  font-weight: 300;
+}
+
+.tutorials-section h2 span {
+  color: #c271ff;
+  font-weight: 700;
+}
+
+.tut-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10%;
+  gap: 20px;
+}
+
+.video-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  text-align: left;
+  position: relative;
+}
+
+.video-section::before {
+  content: "";
+  position: absolute;
+  top: 51px;
+  left: 105px;
+  border-style: solid;
+  border-color: transparent transparent transparent violet;
+  border-width: 7px 0 7px 12px;
+  z-index: 3;
+}
+
+.video-section::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 68px;
+  border-radius: 50%;
+  top: 24px;
+  left: 82px;
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+.video-section h3 {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 5px;
+  margin-bottom: -10px;
+}
+
+.video-section p {
+  margin-bottom: 10px;
+  color: #c0c0c0;
+  padding: 5px;
+}
+
+.author-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.author-section h4 {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #c271ff;
+  margin: 0;
+}
+
+.author-section img {
+  width: 20px;
+}
+
+.rating-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+.rating-section div {
+  display: flex;
+  color: #c271ff;
+}
+
+/* =======================
+   MEMBERSHIP
+======================= */
+.membership-section {
+  background-color: #071629;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.membership-section h2 {
+  color: white;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.membership-section h2 span {
+  color: #c271ff;
+}
+
+.memberships-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.membership-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.membership-item img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.membership-item h3 {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.membership-item p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.membership-section button {
+  background: #c271ff;
+  color: white;
+  width: 162px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.33);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.membership-section button:hover {
+  background: #b45fe0;
+}
+
+/* =======================
+   FAQ SECTION
+======================= */
+.faq-section h2 {
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.faq-line {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0.9;
+  max-width: 350px;
+}
+
+.faq-line h3 {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.faq-line p {
+  font-weight: 400;
+  color: #acacac;
+}
+
+/* =======================
+   FOOTER
+======================= */
+.footer-section {
+  margin-top: 100px;
+  background-color: #071629;
+  color: #cccccc;
+  padding: 20px 10%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.footer-section p {
+  color: #cccccc;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 600px) {
+  .memberships-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .faq-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
