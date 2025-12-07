@@ -1,0 +1,562 @@
+/* =========================
+   RESET & GLOBAL SETTINGS
+   ========================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #ff6565;
+  --color-bg: #020814;
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.8);
+  --color-text-dark: #071629;
+  --color-text-gray: #6b6b6b;
+  --font-main: "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --container-max-width: 1000px;
+  --container-padding-x: 1.5rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Reusable container */
+.container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  color: var(--color-text);
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(2, 8, 20, 0.95)),
+    url("images/headphones_hero_1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__overlay {
+  width: 100%;
+  height: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADER / NAVIGATION
+   ========================= */
+
+.header {
+  width: 100%;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo area */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.logo__icon {
+  width: 40px;
+  height: auto;
+}
+
+.logo__text {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
+
+/* Desktop navigation (hidden on mobile first) */
+.nav {
+  display: none;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease-in-out;
+}
+
+/* Links hover/active color requirement */
+.nav__link:hover,
+.nav__link:active {
+  color: var(--color-primary);
+}
+
+/* Mobile hamburger (visual only for this task) */
+.nav-toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle__icon {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Draw two horizontal lines */
+.nav-toggle__icon::before,
+.nav-toggle__icon::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 999px;
+}
+
+.nav-toggle__icon::before {
+  top: 10px;
+}
+
+.nav-toggle__icon::after {
+  top: 18px;
+}
+
+/* Circular outline around the hamburger */
+.nav-toggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--color-text);
+  opacity: 0.8;
+}
+
+/* =========================
+   HERO CONTENT
+   ========================= */
+
+.hero__content {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  color: var(--color-text-muted);
+}
+
+/* Generic button style */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.8rem;
+  border-radius: 999px;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* Primary CTA button */
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+/* Button hover/active requirement: opacity 0.9 */
+.btn--primary:hover,
+.btn--primary:active {
+  opacity: 0.9;
+  transform: translateY(1px);
+}
+
+.hero__description {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* =========================
+   GENERIC SECTION STYLES
+   ========================= */
+
+.section {
+  padding: 4rem 0;
+}
+
+.section__inner {
+  text-align: center;
+}
+
+.section__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: 1rem;
+}
+
+.section__intro {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-gray);
+}
+
+/* =========================
+   WHAT WE DO SECTION
+   ========================= */
+
+.section--what {
+  background-color: #ffffff;
+  color: var(--color-text-dark);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature__icon {
+  display: inline-block;
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.feature__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-gray);
+}
+/* =========================
+   OUR RESULTS SECTION
+   ========================= */
+
+.section--results {
+  padding: 0; /* handled by inner container */
+  background-color: #020814;
+  color: #ffffff;
+}
+
+.results__overlay {
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(2, 8, 20, 0.95)),
+    url("images/headphones_hero_2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.results__inner {
+  padding-block: 4rem;
+}
+
+.results__content {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+}
+
+.results__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.results__intro {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.results__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ⬅️ makes 4 horizontal columns */
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+
+.result-card {
+  position: relative;
+  width: 170px;
+  max-width: 60vw;
+}
+
+.result-card__shape {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.result-card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-inline: 0.5rem;
+}
+
+.result-card__value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.result-card__label {
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+/* =========================
+   CONTACT US SECTION
+========================= */
+
+.section--contact {
+  background-color: #ffffff;
+  color: #071629; /* dark text for visibility */
+  padding: 80px 0 90px;
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #071629;
+}
+
+.contact-form {
+  max-width: 335px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #071629;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 8px 0;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: transparent;
+  outline: none;
+  color: #071629;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom-color: #ff6565;
+}
+
+.contact-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 0.9rem 2.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.footer {
+  background-color: #071629;
+  color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social span {
+  font-size: 20px;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
+  margin: 0;
+}
+
+
+/* ============= RESPONSIVE ============= */
+
+/* Tablet */
+
+@media screen and (max-width: 900px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: rgba(7, 22, 41, 0.95);
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+    display: none;
+  }
+
+  .nav-toggle-label {
+    display: block;
+    position: relative;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-container {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding-bottom: 80px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
