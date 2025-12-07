@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Headphones - Hero & What we do</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Google Font (Source Sans Pro) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Holberton icon font (from holberton_school-icon.zip) -->
+  <link rel="stylesheet" href="icons/holberton_school-icon.css">
+
+  <link rel="stylesheet" href="1-styles.css" />
+</head>
+<body>
+  <!-- Hero section contains header + main hero content -->
+  <section class="hero">
+    <div class="hero__overlay">
+      <!-- Header / Navigation -->
+      <header class="header">
+        <div class="container header__inner">
+          <a href="#" class="logo">
+            <img src="images/logo_headphones.png" alt="Headphones logo" class="logo__icon">
+            <span class="logo__text">HEADPHONES</span>
+          </a>
+
+          <!-- Desktop navigation -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#what-we-do" class="nav__link">what we do</a></li>
+              <li class="nav__item"><a href="#our-results" class="nav__link">our results</a></li>
+              <li class="nav__item"><a href="#contact-us" class="nav__link">contact us</a></li>
+            </ul>
+          </nav>
+
+          <!-- Mobile hamburger icon (static for this task, JS will be added later) -->
+          <button class="nav-toggle" type="button" aria-label="Open navigation">
+            <span class="nav-toggle__icon"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero text / CTA -->
+      <div class="container hero__content">
+        <h1 class="hero__title">
+          Lorem ipsum dolor set amet<br />
+          lorem ipsum
+        </h1>
+
+        <p class="hero__subtitle">
+          Lorem ipsum dolor set amet lorem ipsum dolor set
+        </p>
+
+        <a href="#contact-us" class="btn btn--primary">
+          CALL TO ACTION
+        </a>
+
+        <p class="hero__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       What we do section
+       ========================= -->
+  <section class="section section--what" id="what-we-do">
+    <div class="container section__inner">
+      <h2 class="section__title">What we do...</h2>
+
+      <p class="section__intro">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat.
+      </p>
+
+      <div class="features">
+        <article class="feature">
+          <span class="feature__icon holberton_school-icon holberton_school-icon-ic_sound"></span>
+          <h3 class="feature__title">Lorem ipsum</h3>
+          <p class="feature__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          </p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon holberton_school-icon holberton_school-icon-ic_video"></span>
+          <h3 class="feature__title">Lorem ipsum</h3>
+          <p class="feature__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          </p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon holberton_school-icon holberton_school-icon-ic_music"></span>
+          <h3 class="feature__title">Lorem ipsum</h3>
+          <p class="feature__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          </p>
+        </article>
+
+        <article class="feature">
+          <span class="feature__icon holberton_school-icon holberton_school-icon-ic_hearing"></span>
+          <h3 class="feature__title">Lorem ipsum</h3>
+          <p class="feature__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
